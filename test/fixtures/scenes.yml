@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  person: MyString
+  tag1: MyString
+  tag2: MyString
+  tag3: MyString
+  where: MyString
+  when: MyString
+  explanation: MyText
+  game_id: 1
+
+two:
+  title: MyString
+  person: MyString
+  tag1: MyString
+  tag2: MyString
+  tag3: MyString
+  where: MyString
+  when: MyString
+  explanation: MyText
+  game_id: 1

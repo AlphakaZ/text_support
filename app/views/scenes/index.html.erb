@@ -1,0 +1,44 @@
+<h1>シーンリスト</h1>
+
+<p>
+シーンの一覧です。詳しい概要に関しては【個別ページ】を選択してください。
+</p>
+
+<table class ='scaffold_table'>
+  <tr>
+    <th>シーンタイトル</th>
+    <th>登場人物</th>
+    <th>タグ１</th>
+    <th>タグ２</th>
+    <th>タグ３</th>
+    <th>場所</th>
+    <th>時</th>
+<!--    <th>概要</th> -->
+    <th>所属ゲーム</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scenes.each do |scene| %>
+  <tr>
+    <td><%= scene.title %></td>
+    <td><%= scene.person %></td>
+    <td><%= scene.tag1 %></td>
+    <td><%= scene.tag2 %></td>
+    <td><%= scene.tag3 %></td>
+    <td><%= scene.where %></td>
+    <td><%= scene.when %></td>
+ <!--   <td><%= scene.explanation %></td> -->
+    <td><%= scene.game_id %></td>
+    <td><%= link_to '個別ページ', scene %></td>
+    <td><%= link_to 'エディット', edit_scene_path(scene) %></td>
+    <td><%= link_to '消去', scene, method: :delete, data: { confirm: 'このシーンを消去してよろしいですか？' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to '新しいシーンの追加', new_scene_path %>
+
+<br />
+<%= image_tag("kaminomi.png") %>

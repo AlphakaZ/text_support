@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>シーンタイトル:</b>
+  <%= @scene.title %>
+</p>
+
+<p>
+  <b>登場人物:</b>
+  <%= @scene.person %>
+</p>
+
+<p>
+  <b>タグ１:</b>
+  <%= @scene.tag1 %>
+</p>
+
+<p>
+  <b>タグ２:</b>
+  <%= @scene.tag2 %>
+</p>
+
+<p>
+  <b>タグ３:</b>
+  <%= @scene.tag3 %>
+</p>
+
+<p>
+  <b>場所:</b>
+  <%= @scene.where %>
+</p>
+
+<p>
+  <b>時:</b>
+  <%= @scene.when %>
+</p>
+
+<p style="width:60em;">
+  <b>概要:</b>
+  <%= @scene.explanation %>
+</p>
+
+<p>
+  <b>所属ゲーム:</b>
+  <%= @scene.game_id %>
+</p>
+
+
+<%= link_to 'エディット', edit_scene_path(@scene) %> |
+<%= link_to 'シーン一覧に戻る', scenes_path %>
