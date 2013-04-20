@@ -1,15 +1,15 @@
-<h1>Listing game_texts</h1>
+<h1>ゲームテキスト一覧</h1>
 
-<table>
+<table class = 'scaffold_table'>
   <tr>
-    <th>Part</th>
-    <th>Talker</th>
-    <th>Fontsize</th>
-    <th>Scene</th>
+    <th>名前</th>
+    <th>テキスト</th>
+    <th>フォントサイズ</th>
+    <th>所属シーン</th>
     <th>Music</th>
-    <th>Background</th>
-    <th>Characterface</th>
-    <th>Ordernum</th>
+    <th>BGM</th>
+    <th>キャラクター表情指定</th>
+    <th>順序</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,8 +17,8 @@
 
 <% @game_texts.each do |game_text| %>
   <tr>
-    <td><%= game_text.part %></td>
     <td><%= game_text.talker %></td>
+    <td class = 'textWidth'><%= game_text.part %></td>
     <td><%= game_text.fontSize %></td>
     <td><%= game_text.scene_id %></td>
     <td><%= game_text.music %></td>

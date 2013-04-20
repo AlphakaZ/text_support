@@ -10,14 +10,13 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :part %><br />
-    <%= f.text_area :part %>
-  </div>
   <div class="field">
     <%= f.label :talker %><br />
     <%= f.text_field :talker %>
+  </div>
+  <div class="field">
+    <%= f.label :part %><br />
+    <%= f.text_area :part, :maxlength => "75", :size =>"35x4" %>
   </div>
   <div class="field">
     <%= f.label :fontSize %><br />
