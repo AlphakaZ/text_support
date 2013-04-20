@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>ID:</b>
+  <%= @scene.id %>
+</p>
+
+<p>
   <b>シーンタイトル:</b>
   <%= @scene.title %>
 </p>
@@ -43,6 +48,20 @@
 <p>
   <b>所属ゲーム:</b>
   <%= @scene.game_id %>
+</p>
+<hr>
+<hr>
+<b>所有テキスト</b>
+<hr>
+<% if @scene.game_texts %>
+<% for det in @scene.game_texts %>
+<p>
+<h3>＊<%= det.talker %>＊</h3>
+<h3 style="width:25em;"><%= det.part %></h3>
+<hr>
+</p>
+<% end %>
+<% end %>
 </p>
 
 
