@@ -1,0 +1,37 @@
+<h1>Listing game_texts</h1>
+
+<table>
+  <tr>
+    <th>Part</th>
+    <th>Talker</th>
+    <th>Fontsize</th>
+    <th>Scene</th>
+    <th>Music</th>
+    <th>Background</th>
+    <th>Characterface</th>
+    <th>Ordernum</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @game_texts.each do |game_text| %>
+  <tr>
+    <td><%= game_text.part %></td>
+    <td><%= game_text.talker %></td>
+    <td><%= game_text.fontSize %></td>
+    <td><%= game_text.scene_id %></td>
+    <td><%= game_text.music %></td>
+    <td><%= game_text.background %></td>
+    <td><%= game_text.characterFace %></td>
+    <td><%= game_text.orderNum %></td>
+    <td><%= link_to 'Show', game_text %></td>
+    <td><%= link_to 'Edit', edit_game_text_path(game_text) %></td>
+    <td><%= link_to 'Destroy', game_text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Game text', new_game_text_path %>

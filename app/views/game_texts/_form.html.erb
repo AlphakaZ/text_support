@@ -1,0 +1,49 @@
+<%= form_for(@game_text) do |f| %>
+  <% if @game_text.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@game_text.errors.count, "error") %> prohibited this game_text from being saved:</h2>
+
+      <ul>
+      <% @game_text.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :part %><br />
+    <%= f.text_area :part %>
+  </div>
+  <div class="field">
+    <%= f.label :talker %><br />
+    <%= f.text_field :talker %>
+  </div>
+  <div class="field">
+    <%= f.label :fontSize %><br />
+    <%= f.number_field :fontSize %>
+  </div>
+  <div class="field">
+    <%= f.label :scene_id %><br />
+    <%= f.number_field :scene_id %>
+  </div>
+  <div class="field">
+    <%= f.label :music %><br />
+    <%= f.text_field :music %>
+  </div>
+  <div class="field">
+    <%= f.label :background %><br />
+    <%= f.text_field :background %>
+  </div>
+  <div class="field">
+    <%= f.label :characterFace %><br />
+    <%= f.text_field :characterFace %>
+  </div>
+  <div class="field">
+    <%= f.label :orderNum %><br />
+    <%= f.text_field :orderNum %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

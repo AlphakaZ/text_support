@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Part:</b>
+  <%= @game_text.part %>
+</p>
+
+<p>
+  <b>Talker:</b>
+  <%= @game_text.talker %>
+</p>
+
+<p>
+  <b>Fontsize:</b>
+  <%= @game_text.fontSize %>
+</p>
+
+<p>
+  <b>Scene:</b>
+  <%= @game_text.scene_id %>
+</p>
+
+<p>
+  <b>Music:</b>
+  <%= @game_text.music %>
+</p>
+
+<p>
+  <b>Background:</b>
+  <%= @game_text.background %>
+</p>
+
+<p>
+  <b>Characterface:</b>
+  <%= @game_text.characterFace %>
+</p>
+
+<p>
+  <b>Ordernum:</b>
+  <%= @game_text.orderNum %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_text_path(@game_text) %> |
+<%= link_to 'Back', game_texts_path %>

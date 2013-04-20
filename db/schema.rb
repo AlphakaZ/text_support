@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418151422) do
+ActiveRecord::Schema.define(:version => 20130420062537) do
+
+  create_table "game_texts", :force => true do |t|
+    t.text     "part"
+    t.string   "talker"
+    t.integer  "fontSize"
+    t.integer  "scene_id"
+    t.string   "music"
+    t.string   "background"
+    t.string   "characterFace"
+    t.string   "orderNum"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "scenes", :force => true do |t|
     t.string   "title"

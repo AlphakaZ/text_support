@@ -1,4 +1,7 @@
 TextSupport::Application.routes.draw do
+  resources :game_texts
+
+
   resources :scenes
 
 
