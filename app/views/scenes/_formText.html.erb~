@@ -1,0 +1,53 @@
+<%= form_for(@scene) do |f| %>
+  <% if @scene.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scene.errors.count, "error") %> prohibited this scene from being saved:</h2>
+
+      <ul>
+      <% @scene.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :シーンタイトル %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :登場人物 %><br />
+    <%= f.text_field :person %>
+  </div>
+  <div class="field">
+    <%= f.label :タグ１ %><br />
+    <%= f.text_field :tag1 %>
+  </div>
+  <div class="field">
+    <%= f.label :タグ２ %><br />
+    <%= f.text_field :tag2 %>
+  </div>
+  <div class="field">
+    <%= f.label :視点 %><br />
+    <%= f.text_field :tag3 %>
+  </div>
+  <div class="field">
+    <%= f.label :場所 %><br />
+    <%= f.text_field :where %>
+  </div>
+  <div class="field">
+    <%= f.label :時 %><br />
+    <%= f.text_field :when %>
+  </div>
+  <div class="field">
+    <%= f.label :概要 %><br />
+    <%= f.text_area :explanation %>
+  </div>
+  <div class="field">
+    <%= f.label :所属ゲーム %><br />
+    <%= f.number_field :game_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

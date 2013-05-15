@@ -27,10 +27,11 @@
     <td><%= game_text.orderNum %></td>
     <td><%= link_to 'Show', game_text %></td>
     <td><%= link_to 'Edit', edit_game_text_path(game_text) %></td>
-    <td><%= link_to 'Destroy', game_text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', game_text, method: :delete, data: { confirm: 'このテキストを消去してもよろしいですか？' } %></td>
   </tr>
 <% end %>
 </table>
 <br />
 
-<%= link_to 'New Game text', new_game_text_path %>
+<%= link_to '新しいテキストを作成する', new_game_text_path %>
+<%= link_to 'シーン一覧に戻る','/scenes' %>

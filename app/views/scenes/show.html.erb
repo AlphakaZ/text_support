@@ -51,7 +51,7 @@
 </p>
 <hr>
 <hr>
-<b>所有テキスト</b>
+<b>テキスト一覧</b>
 <hr>
 <% if @scene.game_texts %>
 <% for det in @scene.game_texts %>
@@ -61,9 +61,9 @@
 <hr>
 </p>
 <% end %>
+
 <% end %>
 </p>
-
-
+<%= link_to 'テキスト追加','/game_texts/new' %>
 <%= link_to 'エディット', edit_scene_path(@scene) %> |
 <%= link_to 'シーン一覧に戻る', scenes_path %>

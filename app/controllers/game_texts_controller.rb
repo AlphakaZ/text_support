@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 class GameTextsController < ApplicationController
   # GET /game_texts
   # GET /game_texts.json
   def index
     @game_texts = GameText.all
 
-    respond_to do |format|
+    respond_to do |format| #フォーマット変更
       format.html # index.html.erb
       format.json { render json: @game_texts }
     end
@@ -31,7 +32,8 @@ class GameTextsController < ApplicationController
       format.json { render json: @game_text }
     end
   end
-
+  #GET /game_texts/new
+  #GET /game_texts/new.json
   # GET /game_texts/1/edit
   def edit
     @game_text = GameText.find(params[:id])
